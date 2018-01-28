@@ -24,10 +24,12 @@ bin_PROGRAMS = \
 	esedbinfo
 
 esedbexport_SOURCES = \
+	database_types.c database_types.h \
 	esedbexport.c \
 	esedbtools_getopt.c esedbtools_getopt.h \
 	esedbtools_i18n.h \
 	esedbtools_libbfio.h \
+	esedbtools_libcdata.h \
 	esedbtools_libcerror.h \
 	esedbtools_libclocale.h \
 	esedbtools_libcfile.h \
@@ -48,6 +50,7 @@ esedbexport_SOURCES = \
 	export.c export.h \
 	export_handle.c export_handle.h \
 	log_handle.c log_handle.h \
+	srumdb.c srumdb.h \
 	webcache.c webcache.h \
 	windows_search.c windows_search.h \
 	windows_security.c windows_security.h
@@ -64,6 +67,7 @@ esedbexport_LDADD = \
 	@LIBCSPLIT_LIBADD@ \
 	@LIBCNOTIFY_LIBADD@ \
 	@LIBCLOCALE_LIBADD@ \
+	@LIBCDATA_LIBADD@ \
 	../libesedb/libesedb.la \
 	@LIBCERROR_LIBADD@ \
 	@LIBINTL@

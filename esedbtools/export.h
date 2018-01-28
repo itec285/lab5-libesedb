@@ -54,6 +54,13 @@ int export_filetime(
      FILE *record_file_stream,
      libcerror_error_t **error );
 
+int export_floatingtime(
+     libesedb_record_t *record,
+     int record_value_entry,
+     uint8_t byte_order,
+     FILE *record_file_stream,
+     libcerror_error_t **error );
+
 int export_get_long_value_data(
      libesedb_long_value_t *long_value,
      uint8_t **long_value_data,
